@@ -2,3 +2,11 @@
 	display: flex;
 	justify-content: space-around;
 }
+
+.link {
+	text-decoration: none;
+	background-color: rgb(27, 23, 59);
+	color: white;
+	padding: 7px;
+	border-radius: 16px;
+}
