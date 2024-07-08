@@ -1,0 +1,30 @@
+.input {
+	border-radius: 5px;
+	width: 400px;
+	height: 30px;
+	padding: 8px 16px;
+	font-size: 24px;
+	border: 1px solid black;
+	color: rgb(15, 15, 15);
+	margin-top: 15px;
+	max-width: 80%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.button {
+	border: none;
+	background: black;
+	color: white;
+	font-size: 20px;
+	border-radius: 16px;
+	padding: 8px 16px;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
