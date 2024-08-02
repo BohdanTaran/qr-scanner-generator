@@ -15,11 +15,6 @@ export const Layout = () => {
 				<Route path='/qr-scanner-generator/scanHistory' element={<ScanHistory />} />
 				<Route path='/qr-scanner-generator/generateHistory' element={<GenerateHistory />} />
 			</Routes>
-			<div className='text-center flex justify-center mt-5'>
-				<div className='w-9/12'>
-					<span className='text-2xl text-white'>Open the menu and choose an option</span>
-				</div>
-			</div>
 		</div>
 	)
 }
