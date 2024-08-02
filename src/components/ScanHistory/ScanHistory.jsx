@@ -27,26 +27,20 @@ export const ScanHistory = () => {
 		<div className={styles.container}>
 			{data.length === 0 && <h1>Scan History is empty...</h1>}
 			{data.length >= 1 &&
-				<button 
-				className={styles.clearAll}
-				onClick={clearAllHistory}
-				>
-					Clear
-				</button>
+				<div className='px-4 mb-4'>
+				<button onClick={clearAllHistory} className="btn btn-warning text-black text-base">Remove ALL</button>
+			</div>
 			}
 			{data.map((text) => (
-				<div key={text} className={styles.item}>
-					<div className={styles.info}>
-						<span className={styles.qrValue}>{text}</span>
-						<button 
-							className={styles.removeItem}
-							onClick={() => removeScannedQr(text)}
-						>
-							Remove
-						</button>
-					</div>
-					<div>
-						<QRCodeSVG value={text} size={100} />
+				<div className='px-4'>
+					<div key={text} className='flex justify-between rounded-md p-3 max-h-[200px] mb-2 bg-base-300 shadow-xl'>
+						<div className='flex flex-col justify-between max-w-[60%]'>
+							<a href={text} className='overflow-x-auto underline'>{text}</a>
+							<button onClick={() => removeScannedQr(text)} className="btn btn-error text-white text-base">Remove</button>
+						</div>
+						<div>
+							<QRCodeSVG value={text} size={100} />
+						</div>
 					</div>
 				</div>
 			))}

@@ -31,17 +31,15 @@ export const QrCodeGenerator = () => {
 
 	return (
 		<div className={styles.container}>
-			<input 
-				className={styles.input} 
-				placeholder='Enter'
-				type="text" 
+			<input
+				type="text"
+				placeholder="Enter"
 				value={value} 
 				onChange={onChangeHandler}
-			/>
+				className="mt-5 input input-bordered input-accent w-full max-w-xs" />
 			<button 
-				className={styles.button} 
-				type='button' 
-				onClick={onCLickHandler}
+				onClick={onCLickHandler} 
+				className="btn btn-active btn-primary text-white text-xl"
 			>
 				Generate QR
 			</button>

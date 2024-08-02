@@ -9,7 +9,6 @@ export const Layout = () => {
 	return (
 		<div>
 			<Navigation />
-
 			<Routes>
 				<Route path='/qr-scanner-generator/generate' element={<QrCodeGenerator />} />
 				<Route path='/qr-scanner-generator/scan' element={<QrCodeScanner />} />

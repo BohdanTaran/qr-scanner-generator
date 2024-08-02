@@ -1,7 +1,6 @@
 import { QRCodeSVG } from 'qrcode.react'
 import { useEffect, useState } from 'react'
 import { GENERATE_DATA } from '../../constants'
-import styles from './GenerateHistory.module.css'
 
 export const GenerateHistory = () => {
 	const [data, setData] = useState([]);
@@ -24,29 +23,23 @@ export const GenerateHistory = () => {
 	}
 
 	return (
-		<div className={styles.container}>
+		<div className='flex flex-col mt-5'>
 			{data.length === 0 && <h1>Generate History is empty...</h1>}
 			{data.length >= 1 &&
-				<button 
-				className={styles.clearAll}
-				onClick={clearAllHistory}
-				>
-					Clear
-				</button>
+				<div className='px-4 mb-4'>
+					<button onClick={clearAllHistory} className="btn btn-warning text-black text-base">Remove ALL</button>
+				</div>
 			}
 			{data.map((text) => (
-				<div key={text} className={styles.item}>
-					<div className={styles.info}>
-						<span className={styles.qrValue}>{text}</span>
-						<button 
-							className={styles.removeItem}
-							onClick={() => removeGeneratedQr(text)}
-						>
-							Remove
-						</button>
-					</div>
-					<div>
-						<QRCodeSVG value={text} size={100} />
+				<div className='px-4'>
+					<div key={text} className='flex justify-between rounded-md p-3 max-h-[200px] mb-2 bg-base-300 shadow-xl'>
+						<div className='flex flex-col justify-between max-w-[60%]'>
+							<a href={text} className='overflow-x-auto underline'>{text}</a>
+							<button onClick={() => removeGeneratedQr(text)} className="btn btn-error text-white text-base">Remove</button>
+						</div>
+						<div>
+							<QRCodeSVG value={text} size={100} />
+						</div>
 					</div>
 				</div>
 			))}
