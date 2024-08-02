@@ -10,7 +10,7 @@ export const Navigation = () => {
 			<div className="flex flex-1 justify-end px-2">
 				<div className="flex items-stretch">
 					<div className="dropdown dropdown-end">
-						<div tabIndex={0} role="button" className="btn btn-ghost rounded-btn">Menu</div>
+						<div tabIndex={0} role="button" className="btn btn-ghost rounded-btn text-xl shadow-md shadow-base-100">Menu</div>
 						<ul
 							tabIndex={0}
 							className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow flex flex-col space-y-5">

@@ -1,7 +1,6 @@
 import { QRCodeSVG } from 'qrcode.react'
 import { useEffect, useState } from 'react'
 import { SCAN_DATA } from '../../constants'
-import styles from './ScanHistory.module.css'
 
 export const ScanHistory = () => {
 	const [data, setData] = useState([]);
