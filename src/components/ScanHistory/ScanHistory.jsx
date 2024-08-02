@@ -23,7 +23,7 @@ export const ScanHistory = () => {
 	}
 
 	return (
-		<div className={styles.container}>
+		<div className='flex flex-col mt-5'>
 			{data.length === 0 && <h1>Scan History is empty...</h1>}
 			{data.length >= 1 &&
 				<div className='px-4 mb-4'>
